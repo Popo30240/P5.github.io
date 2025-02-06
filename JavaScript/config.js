@@ -1,3 +1,5 @@
+//Constant
+
 const slides = [
 	{
 		"image":"slide1.jpg",
