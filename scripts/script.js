@@ -1,5 +1,3 @@
-let currentIndex = 0; // Index de l'image actuelle
-
 function updateSlide() {
     imageElement.src = slides[currentIndex].image;
     taglineElement.innerHTML = slides[currentIndex].tagLine;
@@ -16,5 +14,3 @@ arrowRight.addEventListener("click", () => {
     updateSlide();
 	console.log("Flèche droite cliquée !" + " numéro " + currentIndex + " du tableau ");
 });
-
-updateSlide();

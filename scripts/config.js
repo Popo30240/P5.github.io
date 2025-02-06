@@ -31,3 +31,7 @@ const arrowLeft = document.querySelector(".arrow_left");
 
 const arrowRight = document.querySelector(".arrow_right");
 //console.log(arrowRight)
+
+// variable modifiable 
+
+let currentIndex = 0; // Index de l'image actuelle
