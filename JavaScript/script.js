@@ -1,25 +1,20 @@
+let currentIndex = 0; // Index de l'image actuelle
 
-
-//let currentIndex = 0; // Index de l'image actuelle
-
-// Sélection des éléments HTML
-const imageElement = document.getElementById("slideImage");
-//console.log(imageElement)
-
-const taglineElement = document.getElementById("slideText");
-//console.log(taglineElement)
-
-const arrowLeft = document.getElementById("arrow_left");
-//console.log(arrow_left)
-
-const arrowRight = document.getElementById("arrow_right");
-//console.log(arrow_right)
-
+function updateSlide() {
+    imageElement.src = slides[currentIndex].image;
+    taglineElement.innerHTML = slides[currentIndex].tagLine;
+}
 
 arrowLeft.addEventListener("click", () => {
-	console.log("Flèche gauche cliquée !");
+	currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Boucle vers la fin
+    updateSlide();
+	console.log("Flèche gauche cliquée !" + ", numéro " + currentIndex + " du tableau ");
 });
 
 arrowRight.addEventListener("click", () => {
-	console.log("Flèche droite cliquée !");
+	currentIndex = (currentIndex + 1) % slides.length; // Boucle vers le début
+    updateSlide();
+	console.log("Flèche droite cliquée !" + " numéro " + currentIndex + " du tableau ");
 });
+
+updateSlide();

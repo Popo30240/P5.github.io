@@ -124,14 +124,14 @@ header {
 	display: flex;
 	position: absolute;
 }
-#arrow_left {
-	position: relative;
-	right: 250px;
+#banner .arrow_left {
+	position: fixed;
+	left: 50px;
 	cursor: pointer; /* Change le curseur pour indiquer un élément cliquable */
 }
-#arrow_right {
-	position: relative;
-	left: 250px;
+#banner .arrow_right {
+	position: fixed;
+	right: 50px;
 	cursor: pointer; /* Change le curseur pour indiquer un élément cliquable */
 }
 /* Gestion des points du carrousel */
