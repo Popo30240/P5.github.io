@@ -1,3 +1,5 @@
+/************* VARIABLES GLOBALES **************/
+
 //Constant
 
 const slides = [
@@ -20,18 +22,35 @@ const slides = [
 ]
 
 // Sélection des éléments HTML
+
+// Permet de retourner tout le contenu de la classe
 const imageElement = document.querySelector(".slideImage");
 //console.log(imageElement)
 
+// Permet de retourner tout le contenu de la classe
 const taglineElement = document.querySelector(".slideText");
-console.log(taglineElement)
+//console.log(taglineElement)
 
+// Permet de retourner tout le contenu de la classe
 const arrowLeft = document.querySelector(".arrow_left");
 //console.log(arrowLeft)
 
+// Permet de retourner tout le contenu de la classe
 const arrowRight = document.querySelector(".arrow_right");
 //console.log(arrowRight)
 
+// Permet de retourner tout le contenu de la classe
+const bulletsContainer = document.querySelector(".dots");
+console.log(bulletsContainer)
+
+
+// Tableau vides des bullets points
+const bullets = [];
+
+
+
+
 // variable modifiable 
 
+// Initialise le tableau des slides à 0
 let currentIndex = 0; // Index de l'image actuelle
