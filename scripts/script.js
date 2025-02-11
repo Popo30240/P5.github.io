@@ -9,6 +9,7 @@ slides.forEach((_, index) => {
     // Ajouter un eventListener sur chaque bullet
     bullet.addEventListener("click", () => {
         currentIndex = index; // Aller directement à l'image correspondante
+        console.log(" numéro " + index + " du tableau sélectionné")
         updateSlide();
     });
 
@@ -50,11 +51,11 @@ function updateSlide() {
 arrowLeft.addEventListener("click", () => {
 	currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Boucle vers la fin
     updateSlide();
-	console.log("Flèche gauche cliquée !" + ", numéro " + currentIndex + " du tableau ");
+	console.log("Flèche gauche cliquée !" + ", numéro " + currentIndex + " du tableau sur " + slides.length);
 });
 
 arrowRight.addEventListener("click", () => {
 	currentIndex = (currentIndex + 1) % slides.length; // Boucle vers le début
     updateSlide();
-	console.log("Flèche droite cliquée !" + " numéro " + currentIndex + " du tableau ");
+	console.log("Flèche droite cliquée !" + " numéro " + currentIndex + " du tableau sur " + slides.length);
 });
